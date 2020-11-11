@@ -30,9 +30,9 @@ $mail->Port = 25;
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication - use full email address for gmail
-$mail->Username = 'ismaelflores@ismaelflores.tk';
+$mail->Username = getenv('USER_MAIL');
 //Password to use for SMTP authentication
-$mail->Password = 'Ismaelflores01!';  //Usar un token de Gmail (Cuenta -> Seguridad -> Contraseñas de aplicaciones)
+$mail->Password = getenv('PASSWORD_MAIL)';  //Usar un token de Gmail (Cuenta -> Seguridad -> Contraseñas de aplicaciones)
 //Set who the message is to be sent from
 $mail->setFrom('ismaelflores@ismaelflores.tk');
 //Set who the message is to be sent to
