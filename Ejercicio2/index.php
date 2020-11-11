@@ -46,7 +46,7 @@ $mail->msgHTML("<body><h2>Hoooola</h2></body>", __DIR__);
 //Replace the plain text body with one created manually
 $mail->AltBody = 'This is a plain-text message body';
 //Attach an image file
-//$mail->addAttachment('prueba.pdf');
+//$mail->addAttachment('prueba.pdf'); Antes no iba porque este pdf no lo encuentra en local, creo. Luego pones aquí el que generas con la factura. Talue
 //send the message, check for errors
 if (!$mail->send()) {
     echo 'Mailer Error: '. $mail->ErrorInfo;
