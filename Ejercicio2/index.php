@@ -20,18 +20,19 @@ $mail = new PHPMailer;
 $mail->isSMTP();
 //$mail->SMTPDebug = SMTP::DEBUG_SERVER;   //Para depurar los mensajes de error del correo. IMPORTANTE
 //Set the hostname of the mail server
-$mail->Host = 'smtp.gmail.com';
+$mail->Host = 'free.mboxhosting.com';
 
 //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
-$mail->Port = 465;  //2525 o 587 sin ssl
+//$mail->Port = 465;  //2525 o 587 sin ssl
+$mail->Port = 25; 
 //Set the encryption mechanism to use - STARTTLS or SMTPS
-$mail->SMTPSecure = 'ssl';
+//$mail->SMTPSecure = 'ssl';
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication - use full email address for gmail
-$mail->Username = getenv('GMAIL_USER');
+$mail->Username = 'ismaelflores@ismaelflores.tk';
 //Password to use for SMTP authentication
-$mail->Password = getenv('GMAIL_TOKEN');  //Usar un token de Gmail (Cuenta -> Seguridad -> Contraseñas de aplicaciones)
+$mail->Password = 'Ismaelflores01!';  //Usar un token de Gmail (Cuenta -> Seguridad -> Contraseñas de aplicaciones)
 //Set who the message is to be sent from
 $mail->setFrom('ismaelflores@ismaelflores.tk');
 //Set who the message is to be sent to
