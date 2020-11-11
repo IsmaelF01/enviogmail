@@ -18,7 +18,7 @@ echo "Enviando mail con PHPMailer ...";
 $mail = new PHPMailer;
 //Tell PHPMailer to use SMTP
 $mail->isSMTP();
-$mail->SMTPDebug = SMTP::DEBUG_SERVER;   //Para depurar los mensajes de error del correo. IMPORTANTE
+$mail->SMTPDebug = 2;   //Para depurar los mensajes de error del correo. IMPORTANTE
 //Set the hostname of the mail server
 $mail->Host = 'smtp.gmail.com';
 
