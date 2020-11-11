@@ -24,9 +24,9 @@ $mail->Host = 'free.mboxhosting.com';
 
 //Set the SMTP port number - 587 for authenticated TLS, a.k.a. RFC4409 SMTP submission
 //$mail->Port = 465;  //2525 o 587 sin ssl
-$mail->Port = 465; 
+$mail->Port = 25; 
 //Set the encryption mechanism to use - STARTTLS or SMTPS
-$mail->SMTPSecure = 'ssl';
+//$mail->SMTPSecure = 'ssl';
 //Whether to use SMTP authentication
 $mail->SMTPAuth = true;
 //Username to use for SMTP authentication - use full email address for gmail
@@ -41,7 +41,7 @@ $mail->addAddress('ismaelfloressanchez@gmail.com');
 //Set the subject line
 $mail->Subject = 'Prueba desde Heroku';
 //Read an HTML message body from an external file, convert referenced images to embedded,
-//convert HTML into a basic plain-text alternative body  
+//convert HTML into a basic plain-text alternative body
 $mail->msgHTML("<body><h2>Hoooola</h2></body>", __DIR__);
 //Replace the plain text body with one created manually
 $mail->AltBody = 'This is a plain-text message body';
